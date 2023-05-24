@@ -46,7 +46,14 @@ button{
 .cliccata{
     background-color: #1164a3;
 }
-
+p{
+    margin: 0 auto;
+    padding-bottom: 50px;
+    text-align: center;
+}
+p h1{
+    color: red;
+}
 .bomb{
     background-color: red;
 }

@@ -25,8 +25,10 @@ playButton.addEventListener(('click'), function(){
     const numeriRandomici = generaNumeriCasuali();
     console.log(numeriRandomici)
     
+    const h1=document.createElement('h1');
+    const p=document.querySelector('p')
     //Generatore di griglia
-    for (let index = 1; index < 100; index++) {
+    for (let index = 1; index <= 100; index++) {
         const newCell = document.createElement('div');
         newCell.classList.add('cella');
         newCell.innerHTML = `
@@ -39,7 +41,8 @@ playButton.addEventListener(('click'), function(){
 
             if(numeriRandomici.includes(index)){
                 newCell.classList.toggle('bomb')
-                console.log ('HAI PERSO! Hai cliccato su un numero generato randomicamente')
+                h1.append('HAI PERSO, SFIGATO!')
+                p.append(h1)
             } else{
                 newCell.classList.toggle('cliccata');
             }
