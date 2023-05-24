@@ -5,6 +5,10 @@ const gridElement = document.querySelector('div.griglia');
 playButton.addEventListener(('click'), function(){
     gridElement.innerHTML = "";
     //Generatore di numeri casuali
+    /**
+     * @param
+     * @returns list of 16 number generate randomly 
+     */
     function generaNumeriCasuali() {
         const numeriCasuali = [];
       
@@ -33,6 +37,10 @@ playButton.addEventListener(('click'), function(){
         newCell.addEventListener('click', function(){
             console.log(index + 1);
             newCell.classList.toggle('cliccata');
+            if ('cliccata' === numeriRandomici) {
+                newCell.classList.add('bomb');
+                console.log('Hai cliccato sulla bomba. HAI PERSO!')
+            }
         });
 
         gridElement.appendChild(newCell);
