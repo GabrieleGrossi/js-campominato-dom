@@ -39,7 +39,7 @@ playButton.addEventListener(('click'), function(){
 
             if(numeriRandomici.includes(index)){
                 newCell.classList.toggle('bomb')
-                
+                console.log ('HAI PERSO! Hai cliccato su un numero generato randomicamente')
             } else{
                 newCell.classList.toggle('cliccata');
             }
