@@ -40,7 +40,7 @@ playButton.addEventListener(('click'), function(){
             console.log(index);
 
             if(numeriRandomici.includes(index)){
-                newCell.classList.toggle('bomb')
+                newCell.classList.add('bomb')
                 h1.append('HAI PERSO, SFIGATO!')
                 p.append(h1)
             } else{
