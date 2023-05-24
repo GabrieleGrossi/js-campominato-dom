@@ -26,23 +26,25 @@ playButton.addEventListener(('click'), function(){
     console.log(numeriRandomici)
     
     //Generatore di griglia
-    for (let index = 0; index < 100; index++) {
+    for (let index = 1; index < 100; index++) {
         const newCell = document.createElement('div');
         newCell.classList.add('cella');
         newCell.innerHTML = `
             <p>
-                ${index + 1}
+                ${index}
             </p>`;
 
         newCell.addEventListener('click', function(){
-            console.log(index + 1);
-            newCell.classList.toggle('cliccata');
-            if ('cliccata' === numeriRandomici) {
-                newCell.classList.add('bomb');
-                console.log('Hai cliccato sulla bomba. HAI PERSO!')
+            console.log(index);
+
+            if(numeriRandomici.includes(index)){
+                newCell.classList.toggle('bomb')
+                
+            } else{
+                newCell.classList.toggle('cliccata');
             }
         });
 
         gridElement.appendChild(newCell);
     }
-});
+})
